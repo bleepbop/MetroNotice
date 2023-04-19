@@ -2,7 +2,7 @@ import requests
 
 from fastapi import APIRouter
 
-from api.secrets import API_KEY_SERVICE
+from secrets import API_KEY_SERVICE
 
 
 router = APIRouter()
