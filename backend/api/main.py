@@ -1,9 +1,7 @@
-import uvicorn
-
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from routes import (incidents, predictions)
+from .routes import (incidents, predictions)
 
 origins = [
     "http://localhost:3000",
@@ -30,9 +28,3 @@ def new_application():
     return app
 
 app = new_application()
-
-def main():
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
-
-if __name__ == '__main__':
-    main()
